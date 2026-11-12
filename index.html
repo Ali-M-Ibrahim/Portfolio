@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ali Ibrahim – Digital health researcher and lecturer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f3f5f9; --surface:#ffffff; --ink:#14213d; --muted:#55627c; --line:#d5dbe7;
+  --signal:#0b7f8a; --alert:#c9731a;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",Calibri,Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0f1729;--surface:#17213a;--ink:#e8edf7;--muted:#9aa8c4;--line:#2a3756;--signal:#4cc3cf;--alert:#f0a04b}
+}
+:root[data-theme="dark"]{--bg:#0f1729;--surface:#17213a;--ink:#e8edf7;--muted:#9aa8c4;--line:#2a3756;--signal:#4cc3cf;--alert:#f0a04b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
+a{color:var(--signal);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--alert);outline-offset:3px;border-radius:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;padding:1.25rem 0;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.hero{padding:3rem 0 2.5rem}
+h1{font:700 clamp(2.75rem,8vw,5.25rem)/1 var(--serif);letter-spacing:-.02em;margin:0 0 1rem}
+.lede{font:500 clamp(1.25rem,2.6vw,1.65rem)/1.4 var(--serif);max-width:38rem;margin:0 0 1.75rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.65rem 1.1rem;border-radius:6px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--signal)}
+.chart{margin:2.5rem 0 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .5rem}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{font:400 12px var(--sans);fill:var(--muted)}
+.chart .ev{fill:var(--alert);font-weight:500}
+.grid line{stroke:var(--line);stroke-width:1}
+.hyp{fill:none;stroke:var(--signal);stroke-width:3;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw 3.2s ease-out}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.chart figcaption{font-size:.9rem;color:var(--muted);padding:.5rem .25rem .75rem}
+section{display:grid;grid-template-columns:12rem 1fr;gap:1rem 2.5rem;padding:2.75rem 0;border-top:1px solid var(--line)}
+h2{font:700 1.5rem/1.2 var(--serif);margin:0}
+h3{font:500 1.0625rem/1.4 var(--sans);margin:0}
+p{margin:0 0 1rem;max-width:42rem}
+.item{margin-bottom:1.6rem}
+.item:last-child{margin-bottom:0}
+.sub{color:var(--muted);font-size:.95rem;margin:.1rem 0 .35rem}
+ul{margin:.35rem 0 0;padding-left:1.15rem}
+li{margin-bottom:.25rem;max-width:42rem}
+.courses{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0 0;padding:0;list-style:none}
+.courses li{margin:0;padding:.15rem .6rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:.9rem}
+.pubs{list-style:none;padding:0;margin:0}
+.pubs li{display:grid;grid-template-columns:3.5rem 1fr;gap:.5rem;margin-bottom:1.1rem;max-width:44rem}
+.pubs .yr{font:700 1rem var(--serif);color:var(--signal)}
+.pubs .kind{display:block;color:var(--muted);font-size:.9rem}
+.skills dt{font-weight:500;margin-top:.9rem}
+.skills dt:first-child{margin-top:0}
+.skills dd{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media (max-width:720px){section{grid-template-columns:1fr;gap:.75rem}}
+@media (prefers-reduced-motion:reduce){.hyp{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections">
+  <a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#industry">Industry</a><a href="#publications">Publications</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <h1>Ali Ibrahim</h1>
+  <p class="lede">Digital health researcher and lecturer. I build sensor systems that watch over sleep and help prevent falls at night.</p>
+  <div class="cta">
+    <a class="btn primary" href="#publications">Read my papers</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+  <figure class="chart">
+    <svg viewBox="0 0 800 210" role="img" aria-labelledby="hypT hypD">
+      <title id="hypT">Sleep stages across one night</title>
+      <desc id="hypD">A step chart moving between awake, REM, light and deep sleep, with an amber marker where the sleeper gets out of bed.</desc>
+      <g class="grid">
+        <line x1="70" y1="30" x2="790" y2="30"/><line x1="70" y1="75" x2="790" y2="75"/>
+        <line x1="70" y1="120" x2="790" y2="120"/><line x1="70" y1="165" x2="790" y2="165"/>
+      </g>
+      <text x="62" y="34" text-anchor="end">Awake</text><text x="62" y="79" text-anchor="end">REM</text>
+      <text x="62" y="124" text-anchor="end">Light</text><text x="62" y="169" text-anchor="end">Deep</text>
+      <path class="hyp" pathLength="1" d="M70 30H110V120H190V165H280V120H330V75H390V120H470V165H540V120H590V75H650V120H700V30H730V120H790"/>
+      <line x1="700" y1="20" x2="700" y2="180" stroke="var(--alert)" stroke-width="2" stroke-dasharray="4 4"/>
+      <circle cx="700" cy="30" r="6" fill="var(--alert)"/>
+      <text class="ev" x="692" y="22" text-anchor="end">Bed exit detected</text>
+      <text x="70" y="200">Evening</text><text x="790" y="200" text-anchor="end">Morning</text>
+    </svg>
+    <figcaption>An illustrative night of sleep. My research classifies sleep activity like this to spot the moments when a fall is most likely.</figcaption>
+  </figure>
+</header>
+
+<section id="research">
+  <h2>Research</h2>
+  <div>
+    <p>I hold a PhD in Engineering Sciences (computer engineering, automation and signal processing) from the University of Technology of Belfort-Montbéliard, completed in November 2024 at the Sinergies Laboratory. My thesis: <em>Classification of sleep disorders by personalized computer modeling for the prevention of nocturnal falls.</em></p>
+    <p>My work covers fall detection and prediction, sleep disorders and nocturnal falls, remote monitoring of health signals, and ambient sensor networks.</p>
+    <div class="item">
+      <h3>PHC-CEDRE 2026 (in progress)</h3>
+      <p class="sub">Personalized modeling and analysis of sleep activity to predict nocturnal falls. With UCH of Strasbourg and Sacré-Coeur Hospital, Lebanon.</p>
+    </div>
+    <div class="item">
+      <h3>PHC-CEDRE 2019 (completed)</h3>
+      <p class="sub">Modeling and analysis of human gait to determine fall risk in the elderly. With UCH of Strasbourg and Sacré-Coeur Hospital, Lebanon.</p>
+    </div>
+    <p><a href="https://scholar.google.com/citations?hl=en&amp;user=W7OjjYEAAAAJ">Google Scholar profile</a></p>
+  </div>
+</section>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+  <div>
+    <p>Assistant professor at six institutions in Lebanon and Côte d’Ivoire, teaching web, database, mobile and software engineering. I also supervise final-year projects and coordinate courses at Antonine University.</p>
+    <div class="item">
+      <h3>Antonine University</h3>
+      <p class="sub">Computer and Communications Engineering, and Technology in Computer Science, since Sept 2022</p>
+      <ul class="courses"><li>Database Design</li><li>Web Programming 1 and 2</li><li>Mobile Development</li></ul>
+    </div>
+    <div class="item">
+      <h3>Saint Joseph University of Beirut</h3>
+      <p class="sub">INCI since Sept 2024, ESIB since Feb 2024</p>
+      <ul class="courses"><li>Dynamic Web</li><li>Computer Science Project</li><li>Multidisciplinary Project</li><li>Final Year Project</li></ul>
+    </div>
+    <div class="item">
+      <h3>Saint Joseph University, Côte d’Ivoire</h3>
+      <p class="sub">Faculty of Computer Science, Abidjan, since Sept 2025, taught in French</p>
+      <ul class="courses"><li>Web Development Technologies</li><li>Dynamic Web</li><li>Software Engineering</li></ul>
+    </div>
+    <div class="item">
+      <h3>Sagesse University</h3>
+      <p class="sub">Faculty of Engineering, Beirut, since Sept 2026</p>
+      <ul class="courses"><li>Software Engineering</li><li>Programming 2 (C++)</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="industry">
+  <h2>Industry experience</h2>
+  <div>
+    <div class="item">
+      <h3>Specialist Consultant, Azentio Software</h3>
+      <p class="sub">Mansourieh, May 2019 to Oct 2026</p>
+      <ul>
+        <li>Implemented a core banking platform at client sites and trained client teams.</li>
+        <li>Resolved day-to-day issues by tracing log files and analyzing the application.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <h3>Full Stack Developer, BA Solutions</h3>
+      <p class="sub">Beirut, Sept 2019 to Oct 2021, part time</p>
+      <ul><li>Built web and mobile features, REST API integrations and database designs.</li></ul>
+    </div>
+    <div class="item">
+      <h3>Full Stack Developer, Takwin Digital</h3>
+      <p class="sub">Mansourieh, May 2017 to April 2019</p>
+      <ul><li>Built web and mobile features, REST API integrations and database designs.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <ol class="pubs">
+    <li><span class="yr">2024</span><span><strong>BedSense: A Bed-Mounted Sensor Node System for Sleep Activities Monitoring and Nocturnal Falls Detection.</strong> Ibrahim, Chaccour, Hajjam El Hassani, Hajjam El Hassani, Andres. <span class="kind">Journal article, IEEE Sensors</span></span></li>
+    <li><span class="yr">2023</span><span><strong>SleepPal: A Novel System for Elderly Sleep Monitoring and Bed Fall Detection.</strong> Ibrahim, Chaccour, Hajjam El Hassani, Andres. <span class="kind">Book chapter, Springer, Information and Communication Technologies for Ageing Well and eHealth</span></span></li>
+    <li><span class="yr">2023</span><span><strong>SleepPal: A Sleep Monitoring System for Body Movement and Sleep Posture Detection.</strong> Ibrahim, Chaccour, Hajjam El Hassani, Andres. <span class="kind">Conference paper, ICT4AWE, June 2023</span></span></li>
+    <li><span class="yr">2021</span><span><strong>Fall Detection Algorithm using Body Angle for Accurate Classification of Falls and ADLs.</strong> Ibrahim, Chaccour, Hajjam El Hassani, Andres. <span class="kind">Conference paper, IEEE EHB 2021, December 2021</span></span></li>
+    <li><span class="yr">2020</span><span><strong>Bed Fall Detection and Prediction: A Generic Classification and Review of Bed Fall Related Systems.</strong> Ibrahim, Chaccour, Hajjam El Hassani, Andres. <span class="kind">Journal article, IEEE Sensors, November 2020</span></span></li>
+  </ol>
+</section>
+
+<section id="skills">
+  <h2>Skills and affiliations</h2>
+  <div>
+    <dl class="skills">
+      <dt>Languages</dt><dd>Java, C, PHP, PL/SQL, JavaScript, jQuery, HTML, CSS, React JS, React Native</dd>
+      <dt>Frameworks</dt><dd>Laravel, Spring, Spring Boot</dd>
+      <dt>Data and tools</dt><dd>Oracle, SQL, Git, UML, XML, JSON, Unix, Windows</dd>
+      <dt>Hardware</dt><dd>Arduino, ESP8266</dd>
+      <dt>Spoken languages</dt><dd>Arabic (native), English and French (good)</dd>
+      <dt>Memberships</dt><dd>IEEE; Order of Engineers and Architects of Beirut, including its Council of Delegates</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div>
+    <p>Based in Baabda, Lebanon. For research collaborations, teaching or projects, email me.</p>
+    <p><a class="btn primary" href="mailto:Ali.ibrahim@ua.edu.lb">Ali.ibrahim@ua.edu.lb</a></p>
+  </div>
+</section>
+</div>
+<footer><div class="wrap">© Ali Ibrahim</div></footer>
+</body>
+</html>
